@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/sample" xmlns:rt="http://www.example.org/sample"
+elementFormDefault="qualified">
+    <xs:element name="company">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" minOccurs="1" maxOccurs="10">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="emp_name" type="xs:string"/>
+                            <xs:element name="emp_age" type="xs:integer"/>
+                            <xs:element name="emp_salary" type="xs:long"/>
+                            <xs:element name="emp_emailid" type="xs:string"/>
+                            <xs:element name="emp_phonenum" type="xs:long"/>
+                            <xs:element name="emp_designation" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="emp_salary">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="50000"></xs:minInclusive>
+                            <xs:maxInclusive value="200000"></xs:maxInclusive>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+</xs:schema>
