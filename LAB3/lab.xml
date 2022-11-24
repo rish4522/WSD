@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="lab.xsl" type="text/xsl"?>
+<ships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/sample lab.xsd">
+   <prod>
+      <p_name>Samsung Back Cover</p_name>
+      <qty>1875</qty>
+      <city>Kolkata</city>
+      <pin>700005</pin>
+      <last_del>2022-10-01</last_del>
+      <ratings>3.8</ratings>
+   </prod>
+   <prod>
+      <p_name>Xiaomi Back Cover</p_name>
+      <qty>1940</qty>
+      <city>Mumbai</city>
+      <pin>400004</pin>
+      <last_del>2022-11-08</last_del>
+      <ratings>3.9</ratings>
+   </prod>
+   <prod>
+      <p_name>Realme Back Cover</p_name>
+      <qty>526</qty>
+      <city>New Delhi</city>
+      <pin>110010</pin>
+      <last_del>2022-07-24</last_del>
+      <ratings>4.2</ratings>
+   </prod>
+   <prod>
+      <p_name>Rock T-shirt</p_name>
+      <qty>478</qty>
+      <city>Bengaluru</city>
+      <pin>560029</pin>
+      <last_del>2022-09-11</last_del>
+      <ratings>3.6</ratings>
+   </prod>
+   4
+   <prod>
+      <p_name>Astro Laptop Cover</p_name>
+      <qty>630</qty>
+      <city>Lucknow</city>
+      <pin>226018</pin>
+      <last_del>2021-12-25</last_del>
+      <ratings>3.5</ratings>
+   </prod>
+   <prod>
+      <p_name>FRIENDS Poster</p_name>
+      <qty>780</qty>
+      <city>Surat</city>
+      <pin>335099</pin>
+      <last_del>2022-03-18</last_del>
+      <ratings>4.1</ratings>
+   </prod>
+   <prod>
+      <p_name>Godfather Poster</p_name>
+      <qty>217</qty>
+      <city>Kolkata</city>
+      <pin>700005</pin>
+      <last_del>2021-08-08</last_del>
+      <ratings>2.7</ratings>
+   </prod>
+   <prod>
+      <p_name>Iphone Back Cover</p_name>
+      <qty>387</qty>
+      <city>Kanpur</city>
+      <pin>208001</pin>
+      <last_del>2022-06-21</last_del>
+      <ratings>3.9</ratings>
+   </prod>
+</ships>

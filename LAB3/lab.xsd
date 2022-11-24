@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rt="http://www.example.org/sample" targetNamespace="http://www.example.org/sample" elementFormDefault="qualified">
+   <xs:element name="ships">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="prod" minOccurs="1" maxOccurs="unbounded">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="p_name" type="xs:string" />
+                     <xs:element name="qty" type="xs:integer" />
+                     <xs:element name="city" type="xs:string" />
+                     <xs:element name="pin" type="xs:integer" />
+                     <xs:element name="last_del" type="xs:date" />
+                     <xs:element name="ratings" type="xs:decimal" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="pin">
+               <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                     <xs:pattern value="[0-9]{6}" />
+                  </xs:restriction>
+               </xs:simpleType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>
