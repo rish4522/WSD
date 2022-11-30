@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo"></p>
+<p id="demo3"></p>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+        myFunction1(this);
+        myFunction2(this);
+    }
+};
+xhttp.open("GET", "lab4.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+    var xmlDoc = xml.responseXML;
+    var x;
+    x = xmlDoc.getElementsByTagName("name")[2].childNodes[0];
+    document.getElementById("demo1").innerHTML = x.nodeValue;
+    x.nodeValue = "Pandeyji";
+    x = xmlDoc.getElementsByTagName("name")[2].childNodes[0];
+    document.getElementById("demo2").innerHTML = x.nodeValue;
+}
+function myFunction1(xml) {
+    var xmlDoc = xml.responseXML;
+    var root = xmlDoc.documentElement;
+    var currNode = root.childNodes[1];
+    removedNode = currNode.removeChild(currNode.childNodes[1]);
+    document.getElementById("demo").innerHTML =
+    "Removed node: " + removedNode.nodeName;
+}
+function myFunction2(xml) {
+    var x, i, xmlDoc, txt;
+    xmlDoc = xml.responseXML;
+    txt = "";
+    x = xmlDoc.documentElement.childNodes;
+    for (i = 0; i < x.length; i++) { 
+        if (x[i].nodeType == 1) {
+            txt += x[i].nodeName + "<br>";
+        }
+    }
+    document.getElementById("demo3").innerHTML = txt; 
+}
+</script>
+</body>
+</html>

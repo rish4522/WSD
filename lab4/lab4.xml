@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="teststyle.xsl"?>
+<course xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.example.org/sample top.xsd"> 
+<student>
+    <name>Rishabh</name>
+    <regno>30</regno>
+    <class>MCA</class>
+</student> 
+<student>
+    <name>Abhishek</name>
+    <regno>25</regno>
+    <class>MSc</class>
+</student> 
+<student>
+    <name>Akshaya</name>
+    <regno>7</regno>
+    <class>MCA</class>
+</student> 
+<student>
+    <name>Vibha</name>
+    <regno>56</regno>
+    <class>BSc CEP</class>
+</student> 
+<student>
+    <name>Anindita</name>
+    <regno>13</regno>
+    <class>BSc PSEng</class>
+</student> 
+</course>
