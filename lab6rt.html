@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>PRINTS - Login</title>
+</head>
+<body style="background-color: rgb(12, 61, 103);">
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+      
+                  <div class="mb-md-5 mt-md-4 pb-5">
+      
+                    <h2 class="fw-bold mb-2 text-uppercase">THE PRINTS</h2>
+                    <p class="text-white-50 mb-5">Enter your Details!</p>
+      
+                    <div class="form-outline form-white mb-4">
+                      <label class="form-label" for="name">Name</label>
+                      <input type="name" id="name" class="form-control form-control-lg" />
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-control form-control-lg" />
+                        <span></span>
+                      </div>
+
+                      <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="number">Number</label>
+                        <input type="text" id="number" class="form-control form-control-lg" />
+                        <span></span>  
+                        </div>
+                        
+                      <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="age">Age</label>
+                        <input type="number" id="age" class="form-control form-control-lg" />
+                        <span></span>  
+                        </div>
+
+
+                    <div class="form-outline form-white mb-4">
+                      <label class="form-label" for="password">Password</label>
+                      <input type="password" id="password" class="form-control form-control-lg" />
+                      <span></span>
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                      <label class="form-label" for="password">Confirm Password</label>
+                      <input type="password" id="cnfpassword" class="form-control form-control-lg" />
+                      <span></span>
+                    </div>
+      
+                    <br>
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit" onclick="test()">Check Name</button><br>
+                    <br>
+
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                    
+                    <br><br><br>
+                    <button class="btn btn-outline-success btn-lg px-3" type="Create Cookies" onclick="createCookies()">Create Cookies</button>
+                    <br\>
+                    <button class="btn btn-outline-secondary btn-lg px-3" type="Display Cookies" onclick="displayCookies()">Display Cookies</button>
+                    <br><br>
+                    <button class="btn btn-outline-danger btn-lg px-3" type="Delete Cookies" onclick="deleteCookies()">Delete Cookies</button>
+                    <br\>
+                    <button class="btn btn-outline-warning btn-lg px-3" type="session Storage" onclick="session()">Session & Local</button>
+                  </div>
+                  <p id="demo"></p>
+      
+
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>    
+      <script>
+        function test()
+            {
+                var name= document.getElementById('name').value;
+                let regex=/^[A-Za-z.-]+(\s*[A-Za-z.-]+)*$/;
+                if(regex.test(name))
+                {
+                    alert("Name is valid");
+
+                }
+                else
+                {
+                    alert("Name is not valid")
+                }
+
+                             }
+       
+    var email=document.getElementById('email');
+    var number=document.getElementById('number');
+    var age=document.getElementById('age');
+    var span=document.getElementsByTagName('password');
+    var span=document.getElementsByTagName('cnfpassword');
+  var span=document.getElementsByTagName('span');
+    
+    email.onkeydown=function()
+    {
+       const regex1=/^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,8})$/;
+       const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,8})(.[a-z]{1,8})$/;
+       
+       if(regex1.test(email.value)||regex2.test(email.value))
+       {
+         span[0].innerText="Your Email is Valid";
+         span[0].style.color="lime";  
+       }
+       else{
+           span[0].innerText="Invalid Email Id";
+           span[0].style.color="red";
+       }}
+       number.onkeydown=function()
+       {
+          const regnum= /^[0-9]{10}$/;
+          if(regnum.test(number.value))
+       {
+         span[1].innerText="Your Number is Valid";
+         span[1].style.color="lime";  
+       }
+       else{
+           span[1].innerText="Invalid Phone Number";
+           span[1].style.color="red";
+       }   
+       age.onkeyup=function()
+       {  console.log(age.value)
+          
+          if(age.value>17 && age.value<110)
+       {
+         span[2].innerText="Valid Age";
+         span[2].style.color="lime";  
+       }
+       else{
+           span[2].innerText="Invalid Age";
+           span[2].style.color="red";
+       }   
+       }}
+
+       password.onkeydown=function()
+       {
+        const regex3=/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if(regex3.test(password.value))
+       {
+         span[3].innerText="Your password is Valid";
+         span[3].style.color="lime";  
+       }
+       else
+       {
+           span[3].innerText="Invalid Password";
+           span[3].style.color="red";
+       }   
+       } 
+       cnfpassword.onkeydown=function()
+       {
+        const regex4=/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if(regex4.test(cnfpassword.value))
+       {
+         span[4].innerText="Your password is Valid";
+         span[4].style.color="lime";  
+       }
+       else
+       {
+           span[4].innerText="Invalid Password";
+           span[4].style.color="red";
+       }   
+       } 
+
+
+       //COOKIES
+
+
+       //Create cookies
+       function createCookies(){
+       document.cookie = "contact = "+number.value;
+       document.cookie = "email = "+email.value;
+       document.cookie = "age = "+age.value; 
+       }
+
+
+       //Display cookies
+       function displayCookies(){
+        if (document.cookie.length==0)
+       {
+        alert("No cookies")
+       }
+       else (alert(document.cookie))
+       }
+       
+
+       //Delete cookies
+       function deleteCookies(){
+        let cooki = document.cookie.split(";");
+        for (let i = 0; i < cooki.length; i++){
+          let _name = cooki[i].split('=')[0];
+        document.cookie = _name + "= ;expires = 31 Dec 2008 00:00:00 IST";
+        
+          }
+          alert("Cookies Deleted");
+
+        }
+
+        //Session & Local
+        function session(){
+        const fname = document.getElementById('number').value;
+        sessionStorage.setItem('number',number.value);
+
+        const pw = document.getElementById('password').value;
+        localStorage.setItem('password',password.value);
+        
+        alert(localStorage.getItem('password'));
+        alert(sessionStorage.getItem('number'));
+        }
+
+
+
+</script>
+
+
+</body>
+</html>
