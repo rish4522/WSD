@@ -1,0 +1,17 @@
+{"data":[
+    {"ID":1, "Name":"Rishabh", "Designation":"Owner","countrycode":91, "Address": "Ganesh Ganj", "Phone": 9876524242, "Salary": 120000},
+    {"ID":2, "Name":"Honey", "Designation":"Designer","countrycode":10,  "Address": "Hosur Road", "Phone": 7678765342, "Salary": 89000},
+    {"ID":3, "Name":"Chandra", "Designation":"Professor", "countrycode":10, "Address": "598 Virginia Street", "Phone": 9722465589, "Salary": 45000},
+    {"ID":4, "Name":"Anil", "Designation":"Student", "countrycode":6,  "Address": "2919 Adamsville Road", "Phone": 9145667822, "Salary": 0},
+    {"ID":5, "Name":"Kuldeep", "Designation":"Engineer", "countrycode":2,  "Address": "4877 Timberbrooke Lane", "Phone": 9066775422, "Salary": 75000},
+    {"ID":6, "Name":"Sunil", "Designation":"Software Engineer", "countrycode":19,  "Address": "1704 Tori Lane", "Phone": 9122345555, "Salary": 90000},
+    {"ID":7, "Name":"Akshat", "Designation":"Cloud Engineer", "countrycode": 20,  "Address": "3839 Neuport Lane, Apartment 3", "Phone": 9847334322, "Salary": 87000},
+    {"ID":8, "Name":"Rohan", "Designation":"DevOps", "countrycode": 9,  "Address": "1713 Elm Drive", "Phone": 9745653314, "Salary":36000 },  
+    {"ID":9, "Name":"Ronak", "Designation":"DOctor", "countrycode": 10,  "Address": "4759 Walkers Ridge Way", "Phone": 8281760314, "Salary":40000 }, 
+    {"ID":10, "Name":"Kumar", "Designation":"Cricketer", "countrycode": 30,  "Address": "3087 Elmwood Avenue", "Phone": 8281459634, "Salary":37000 },
+    {"ID":11, "Name":"vishwas", "Designation":"SDE", "countrycode": 44,  "Address": "1851 Taylor Street", "Phone":864794425 , "Salary": 56000},
+    {"ID":12, "Name":"Shreya", "Designation":"Judge", "countrycode": 65,  "Address": "23 Aminabad", "Phone": 8692117526, "Salary": 48000},
+    {"ID":13, "Name":"Saumya", "Designation":"Advocate", "countrycode":57,  "Address": "13 Hazratganj", "Phone":7025302314 , "Salary":53000 },
+    {"ID":14, "Name":"Palak", "Designation":"Professor", "countrycode": 91,  "Address": "44 Indiranagar", "Phone": 8682147756, "Salary": 65000},
+    {"ID":15, "Name":"Sachin", "Designation":"Student", "countrycode": 22,  "Address": "55 honey well road", "Phone": 8632147568, "Salary":0 }
+]}

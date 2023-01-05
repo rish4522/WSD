@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--ng-app directive tells AngularJS that myApp
+	is the root element of the application -->
+<html ng-app="myApp">
+
+<head>
+    <!--import the angularjs libraries-->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js">
+    </script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color:beige">
+    <style>
+        a {
+            color: white;
+            background-color: black;
+            font-size: 30px;
+        }
+    </style>
+    <!--hg-template indicates the pages
+			that get loaded as per requirement-->
+    <div class="row">
+        <script type="text/ng-template" id="aboutus.html">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="bg bg-left">
+                            <h2>{{message}}</h2>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="bg bg-right">
+                            <h2>{{message2}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <!--
+            second controller 
+        -->
+        <script type="text/ng-template" id="manipulate.html">
+            <div style="text-align: center;font-family: timesnewroman;font-size: 40px">USER DETAILS</div>
+
+            <div class="row">
+                <table class="table table-striped">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">
+
+                            </th>
+                            <th scope="col">Name<br>
+
+                            </th>
+                            <th scope="col">Designation<br>
+
+                            
+                            <th scope="col">Address<br>
+
+                            </th>
+                            <th scope="col">Phone<br>
+
+                            </th>
+                            <th scope="col">Salary<br>
+
+                            </th>
+                         
+                        </tr>
+                    </thead>
+                    <tbody>
+            </div>
+            <tr ng-repeat="item in names">
+                <td></td>
+                <td>{{item.Name|uppercase}}</td>
+                <td>{{item.Designation}}</td>
+                
+                <td>{{item.Address}}</td>
+                <td>{{item.Phone}}</td>
+                <td>&#x20B9; {{item.Salary}}</td>
+                <!-- <td>&#x260E; {{item.contact}}</td> -->
+            </tr>
+            </tr>
+
+            </tbody>
+            </table>
+
+        </script>
+        <!--
+            third controller
+        -->
+        <script type="text/ng-template" id="mechanicdata.html">
+            <div class="container">
+            <div style="text-align: center;font-family: timesnewroman;font-size: 40px">USER DETAILS</div>
+            <div class="row form-group" style="text-align: center">
+                <div class="col-4"></div>
+                <div class="col-4">Search<br><input class="form-control" type="text" placeholder="Search " ng-model="find"></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row form-group">
+                <div class="col-5"></div>
+                <!-- <div class="col-2" style="text-align: center">STATUS:{1-busy/0-free}<input class="form-control" class="input" type="number" min="0" max="1" ng-model="search.ID"></div> -->
+                <div class="col-5"></div>
+            </div>
+            <div class="row">
+                <table class="table table-striped">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">
+                                <div>
+                                    ROWS :<br><input type="number" ng-model="rowlimit">
+
+                                </div>
+                            </th>
+                            <th scope="col">Name<br>
+                                <input type="text" ng-model="search.Name">
+                            </th>
+                            <th scope="col">Designation<br>
+                                <input type="text" ng-model="search.Designation">
+                            </th>
+                            
+                            <th scope="col">Address<br>
+                                <input type="text" ng-model="search.Address">
+                            </th>
+                            <th scope="col">Phone<br>
+                                <input type="text" ng-model="search.Phone">
+                            </th>
+                            <th scope="col">Salary<br>
+                                <input type="text" ng-model="search.Salary">
+                            </th>
+                       
+
+                        </tr>
+                    </thead>
+                    <tbody>
+            </div>
+            <tr ng-repeat="item in names|filter:search|filter:find |filter:find2 |limitTo:rowlimit | orderBy:'ID'">
+                <td>{{item.ID}}</td>
+                <td>{{item.Name|uppercase}}</td>
+                <td>{{item.Designation}}</td>
+        
+                <td> {{item.Address}}</td>
+                <td>{{item.Phone}}</td>
+                <td>&#x20B9;{{item.Salary}}</td>
+                <!-- <td>&#x260E; {{item.contact}}</td> -->
+            </tr>
+            </tr>
+
+            </tbody>
+            </table>
+        </div>
+        </script>
+    </div>
+    <!--hyperlinks to load different
+			pages dynamically-->
+    <div class="row" style="text-align: center;font: 30px;color: rgb(243, 239, 239); background-color: black;">
+        <div class="col-4">
+            <a href="#/">ABOUT</a>
+        </div>
+        <div class="col-4">
+            <a href="#/manipulate"> Customer Data </a>
+
+        </div>
+        <div class="col-4">
+            <a href="#/mechanicdata">Customer Info</a>
+        </div>
+    </div>
+
+    <div ng-view></div>
+    <script type="text/javascript" src="spa.js"></script>
+</body>
+
+</html>
